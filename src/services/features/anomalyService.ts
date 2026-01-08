@@ -1,7 +1,7 @@
 // Anomaly detection service
 
 import { LLMService } from '../llm/llmService';
-import { formatPromptTemplate, getPromptTemplate } from '../llm/promptTemplates';
+import { getPromptTemplate } from '../llm/promptTemplates';
 import type { AnomalyDetectionRequest, AnomalyResult, AnomalyReport } from '../../types/features';
 import type { LLMPrompt } from '../../types/llm';
 
@@ -153,7 +153,7 @@ Provide a brief explanation of what might be causing this.`,
     return severities[Math.floor(Math.random() * severities.length)];
   }
 
-  private generateAnomalyDescription(query: string): string {
+  private generateAnomalyDescription(_query: string): string {
     const descriptions = [
       'Unexpected spike in metric value',
       'Unusual pattern detected in time series',

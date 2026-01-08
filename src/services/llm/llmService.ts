@@ -1,8 +1,7 @@
 // LLM service wrapper using @grafana/llm
 
-import { getDataFrame } from '@grafana/ui';
-import { LLMError, wrapError } from '../../utils/errors';
-import type { LLMPrompt, LLMResponse, LLMConfig, PromptContext } from '../../types/llm';
+import { wrapError } from '../../utils/errors';
+import type { LLMPrompt, LLMResponse, LLMConfig } from '../../types/llm';
 
 /**
  * LLM Service for interacting with language models through Grafana's LLM infrastructure
@@ -42,9 +41,10 @@ export class LLMService {
    */
   async *streamChat(prompt: LLMPrompt): AsyncGenerator<string, void, unknown> {
     try {
-      const messages = this.buildMessages(prompt);
-
       // Placeholder for streaming implementation
+      // Build messages but don't use them
+      this.buildMessages(prompt);
+
       yield 'Streaming response...';
 
       // In production, this would use @grafana/llm streaming capabilities
@@ -73,12 +73,12 @@ export class LLMService {
   /**
    * Calls the LLM API
    */
-  private async callLLM(messages: Array<{ role: string; content: string }>): Promise<LLMResponse> {
+  private async callLLM(_messages: Array<{ role: string; content: string }>): Promise<LLMResponse> {
     // This is a placeholder implementation
     // In production, this would use @grafana/llm's client
 
     // Simulate API call
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         // Simulate a response
         resolve({

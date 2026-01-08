@@ -1,5 +1,10 @@
 // Feature-specific type definitions
 
+import type { BadgeColor } from '@grafana/ui';
+
+// Re-export BadgeColor for use in components
+export type { BadgeColor };
+
 // Query Feature Types
 export interface QueryRequest {
   naturalLanguage: string;

@@ -1,4 +1,4 @@
-import React, { useState, KeyboardEvent } from 'react';
+import React, { useState } from 'react';
 import { useTheme2, IconButton } from '@grafana/ui';
 import { Input } from '../common';
 
@@ -26,13 +26,6 @@ export const ChatInput: React.FC<ChatInputProps> = ({
     }
   };
 
-  const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSend();
-    }
-  };
-
   const canSend = message.trim().length > 0 && !disabled;
 
   return (
@@ -52,7 +45,6 @@ export const ChatInput: React.FC<ChatInputProps> = ({
           multiline
           rows={1}
           maxLength={maxLength}
-          onKeyDown={handleKeyDown}
         />
         <div
           style={{
@@ -75,7 +67,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
         </div>
       </div>
       <IconButton
-        name="paper-plane"
+        name="arrow-up"
         tooltip="Send message"
         tooltipPlacement="top"
         onClick={handleSend}

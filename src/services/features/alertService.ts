@@ -64,7 +64,7 @@ Provide step-by-step remediation instructions.`,
     }
   }
 
-  private async fetchAlerts(request: AlertAnalysisRequest): Promise<AlertInfo[]> {
+  private async fetchAlerts(_request: AlertAnalysisRequest): Promise<AlertInfo[]> {
     // Simulated alert fetching
     // In production, this would query Grafana's alert API
 
@@ -120,7 +120,7 @@ Provide step-by-step remediation instructions.`,
       .map(
         a => `- ${a.name} (${a.severity}): ${a.annotations.summary || a.annotations.description || 'No description'}`
       )
-      .append('\n');
+      .join('\n');
 
     const prompt: LLMPrompt = {
       system: template.systemPrompt,

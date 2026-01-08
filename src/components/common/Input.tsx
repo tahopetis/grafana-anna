@@ -79,21 +79,33 @@ export const Input: React.FC<InputProps> = ({
   }
 
   return (
-    <GrafanaInput
-      id={id}
-      name={name}
-      value={value}
-      onChange={e => onChange(e.currentTarget.value)}
-      placeholder={placeholder}
-      type={type}
-      disabled={disabled}
-      prefix={prefix}
-      suffix={suffix}
-      maxLength={maxLength}
-      autoFocus={autoFocus}
-      invalid={!!error}
-      error={error}
-    />
+    <div>
+      <GrafanaInput
+        id={id}
+        name={name}
+        value={value}
+        onChange={e => onChange(e.currentTarget.value)}
+        placeholder={placeholder}
+        type={type}
+        disabled={disabled}
+        prefix={prefix}
+        suffix={suffix}
+        maxLength={maxLength}
+        autoFocus={autoFocus}
+        invalid={!!error}
+      />
+      {error && (
+        <div
+          style={{
+            color: theme.colors.error.text,
+            fontSize: theme.typography.size.sm,
+            marginTop: theme.spacing(0.5),
+          }}
+        >
+          {error}
+        </div>
+      )}
+    </div>
   );
 };
 

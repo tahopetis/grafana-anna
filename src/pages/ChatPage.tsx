@@ -7,7 +7,7 @@ export interface ChatPageProps {
   onClose?: () => void;
 }
 
-export const ChatPage: React.FC<ChatPageProps> = ({ onClose }) => {
+export const ChatPage: React.FC<ChatPageProps> = ({ onClose: _onClose }) => {
   return (
     <ErrorBoundary>
       <PanelChrome title="Anna - AI Assistant">

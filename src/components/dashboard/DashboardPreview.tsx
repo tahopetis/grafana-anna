@@ -74,7 +74,7 @@ export const DashboardPreview: React.FC<DashboardPreviewProps> = ({ dashboard, o
                     style={{
                       padding: '2px 6px',
                       backgroundColor: theme.colors.primary.transparent,
-                      borderRadius: theme.shape.radius.small,
+                      borderRadius: theme.shape.radius.default,
                       fontSize: theme.typography.size.xs,
                       textTransform: 'uppercase',
                     }}
@@ -87,7 +87,7 @@ export const DashboardPreview: React.FC<DashboardPreviewProps> = ({ dashboard, o
                     display: 'block',
                     padding: theme.spacing(0.5, 1),
                     backgroundColor: theme.colors.background.primary,
-                    borderRadius: theme.shape.radius.small,
+                    borderRadius: theme.shape.radius.default,
                     fontSize: theme.typography.size.xs,
                     overflow: 'auto',
                   }}

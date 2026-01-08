@@ -10,7 +10,7 @@ export interface FormatOptions {
  * Formats a PromQL query with proper indentation and line breaks
  */
 export function formatPromQL(query: string, options: FormatOptions = {}): string {
-  const { indent = 2, indentation = ' ', compact = false } = options;
+  const { compact = false } = options;
 
   if (compact) {
     return query.replace(/\s+/g, ' ').trim();

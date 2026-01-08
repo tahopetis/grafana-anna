@@ -36,7 +36,7 @@ export const EmptyState: React.FC<EmptyStateProps> = ({ icon, title, description
       )}
       <div
         style={{
-          fontSize: theme.typography.h5,
+          fontSize: theme.typography.size.lg,
           fontWeight: theme.typography.fontWeightMedium,
           color: theme.colors.text.primary,
           marginBottom: theme.spacing(1),

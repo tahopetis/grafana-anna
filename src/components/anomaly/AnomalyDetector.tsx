@@ -98,7 +98,7 @@ export const AnomalyDetector: React.FC<AnomalyDetectorProps> = ({
               <Badge
                 key={s}
                 text={s}
-                color={sensitivity === s ? 'blue' : 'gray'}
+                color={sensitivity === s ? 'blue' : 'blue'}
                 onClick={() => setSensitivity(s)}
                 style={{ cursor: 'pointer' }}
               />
@@ -124,7 +124,7 @@ export const AnomalyDetector: React.FC<AnomalyDetectorProps> = ({
               <Badge
                 key={a}
                 text={a.toUpperCase()}
-                color={algorithm === a ? 'blue' : 'gray'}
+                color={algorithm === a ? 'blue' : 'blue'}
                 onClick={() => setAlgorithm(a)}
                 style={{ cursor: 'pointer' }}
               />

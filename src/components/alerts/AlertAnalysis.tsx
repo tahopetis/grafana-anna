@@ -14,7 +14,7 @@ export const AlertAnalysisView: React.FC<AlertAnalysisViewProps> = ({ analysis }
     <div style={{ display: 'flex', flexDirection: 'column', gap: theme.spacing(2) }}>
       {/* Summary */}
       <Card title="Analysis Summary">
-        <p style={{ margin: 0, fontSize: theme.typography.body.fontSize }}>{analysis.summary}</p>
+        <p style={{ margin: 0, fontSize: theme.typography.size.md }}>{analysis.summary}</p>
       </Card>
 
       {/* Correlations */}
@@ -64,7 +64,7 @@ export const AlertAnalysisView: React.FC<AlertAnalysisViewProps> = ({ analysis }
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: theme.spacing(1), marginBottom: theme.spacing(1) }}>
                   <Badge text={`Priority ${suggestion.priority}`} color="purple" />
-                  <strong style={{ fontSize: theme.typography.h5 }}>{suggestion.title}</strong>
+                  <strong style={{ fontSize: theme.typography.size.md }}>{suggestion.title}</strong>
                 </div>
                 <p style={{ margin: `0 0 ${theme.spacing(1)} 0` }}>{suggestion.description}</p>
                 <CollapsableSection label="Steps" isOpen={false}>

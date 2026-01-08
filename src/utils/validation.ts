@@ -101,7 +101,7 @@ export function validateDashboardRequest(request: Record<string, unknown>): Vali
     errors.push('panelCount must be a number');
   }
 
-  if (request.panelCount && (request.panelCount < 1 || request.panelCount > 20)) {
+  if (request.panelCount && typeof request.panelCount === 'number' && (request.panelCount < 1 || request.panelCount > 20)) {
     errors.push('panelCount must be between 1 and 20');
   }
 

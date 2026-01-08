@@ -1,9 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTheme2 } from '@grafana/ui';
-import { Button, Input, Card, EmptyState } from '../common';
-import { LoadingSpinner } from '../common';
-import { conversationStore, conversationManager } from '../../services/conversation';
-import type { Message } from '../../types';
+import { Button, LoadingSpinner, EmptyState } from '../common';
+import { conversationStore } from '../../services/conversation';
 import { MessageList } from './MessageList';
 import { ChatInput } from './ChatInput';
 
@@ -66,9 +64,6 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
       conversationStore.addMessage(conversationId, {
         role: 'assistant',
         content: response,
-        metadata: {
-          queryType: 'general',
-        },
       });
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to send message';

@@ -1,6 +1,6 @@
 // Conversation context management
 
-import type { Message, Conversation, PromptContext } from '../../types';
+import type { Message } from '../../types';
 import { conversationStore } from './conversationStore';
 
 export interface ConversationContext {
@@ -20,7 +20,7 @@ export class ConversationManager {
   /**
    * Gets the conversation context for LLM prompts
    */
-  getContext(conversationId?: string): PromptContext | undefined {
+  getContext(conversationId?: string): { conversationHistory?: Array<{ role: string; content: string }>; timeRange?: { from: string; to: string } } | undefined {
     const conv = conversationId
       ? this.store.getConversation(conversationId)
       : this.store.getActiveConversation();

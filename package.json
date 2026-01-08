@@ -24,7 +24,7 @@
   "author": {
     "name": "Your Name"
   },
-  "main": "src/module.ts",
+  "main": "src/module.tsx",
   "grafana": {
     "type": "app",
     "id": "anna-ai-assistant",

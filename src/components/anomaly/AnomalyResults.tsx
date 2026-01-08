@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme2, Badge, CollapsableSection } from '@grafana/ui';
 import { Card } from '../common';
-import type { AnomalyResult } from '../../types/features';
+import type { AnomalyResult, BadgeColor } from '../../types/features';
 
 export interface AnomalyResultsProps {
   anomalies: AnomalyResult[];
@@ -50,7 +50,7 @@ interface AnomalyResultCardProps {
 const AnomalyResultCard: React.FC<AnomalyResultCardProps> = ({ anomaly }) => {
   const theme = useTheme2();
 
-  const severityColors: Record<AnomalyResult['severity'], string> = {
+  const severityColors: Record<AnomalyResult['severity'], BadgeColor> = {
     low: 'green',
     medium: 'blue',
     high: 'orange',

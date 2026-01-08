@@ -93,7 +93,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
               <CodeEditor
                 language="promql"
                 value={message.metadata.queryResult.query}
-                readonly
+                readOnly
                 height={100}
               />
               {message.metadata.queryResult.explanation && (
@@ -137,7 +137,7 @@ const MessageContent: React.FC<MessageContentProps> = ({ content }) => {
       }
 
       // Add code block
-      const language = match[1] || 'text';
+      // const language = match[1] || 'text';
       const code = match[2];
       parts.push(
         <pre

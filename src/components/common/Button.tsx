@@ -1,13 +1,14 @@
 import React from 'react';
-import { Button as GrafanaButton } from '@grafana/ui';
+import { Button as GrafanaButton, IconName } from '@grafana/ui';
+import type { ButtonVariant } from '@grafana/ui';
 
 export interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'destructive' | 'link';
+  variant?: ButtonVariant;
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
   loading?: boolean;
-  icon?: string;
+  icon?: IconName;
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;

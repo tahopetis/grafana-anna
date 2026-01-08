@@ -132,7 +132,7 @@ Provide only the queries, one per line, without explanation.`,
     }
   }
 
-  private parseQueryResponse(content: string, queryType: string): QueryResponse {
+  private parseQueryResponse(content: string, _queryType: string): QueryResponse {
     // Extract code blocks from the response
     const codeBlockRegex = /```(?:promql|logql)?\n([\s\S]*?)```/;
     const match = content.match(codeBlockRegex);
