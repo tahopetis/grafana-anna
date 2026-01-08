@@ -14,23 +14,24 @@ Hash: SHA512
   ],
   "plugin": "anna-ai-assistant",
   "version": "0.2.4",
-  "time": 1767905081000,
+  "time": 1767907019955,
   "keyId": "7e4d0c6a708866e7",
   "files": {
     "plugin.json": "3cefe8385e25cba2da3053476418cc3c673b33917830a7a0908cf70665cbb703",
     "img/logo.svg": "f6fc45992a70864fb76a97308785bfd2cf52669b9f6fa413512f886dfec37de7",
-    "module.js": "796c071a1dd3513402c674a4c4b9e009f8cd5981db3dffced7abfa6f3a9e7d84",
-    "module.js.map": "a9b676ab79fa5af6a08252cda53e0696e60916d4fb9bdbac36d27b2d4acd4326",
-    "CLAUDE.md": "c2d7a317e62e64831b3a4056a9ae94a42f96806a084b8247cfb68b7ee3c8384e"
+    "img/CLAUDE.md": "5583ea906f82b2695a45ebf5926361663014a44c0db8de69e5da6ffe979bfee6",
+    "module.js": "67e4f6286f8fa01cca8b94869366c49d84a8f65c2319df3e6e663aec45165577",
+    "module.js.map": "45b4367abdaeaaebefc1a0720260e73f701b368626f05f4c4799bbb46febd2e9",
+    "CLAUDE.md": "1d07bc36fab32b6bd95f899b35b2514d532042962407177676727a1a60e8157a"
   }
 }
 -----BEGIN PGP SIGNATURE-----
 
-wsA9BAETCgBtBYJpYBc5CRB+TQxqcIhm50UUAAAAAAAcACBzYWx0QG5vdGF0
-aW9ucy5vcGVucGdwanMub3Jnk/HaNp/xa45KBDWB4tDYHswhl8U8O87kzGmO
-0I7xQ3wWIQTzOyW2kQdOhGNlcPN+TQxqcIhm5wAAoZECCOuXOIl9HYFrJ87s
-y1KNIZiJOvEK7PjGAq2eyBWkwOGXYIjpi4tvQ7FaC4geAW1dvEX4brOKURVb
-xwDM9G1EMircAgdZCVimnXOXacM+/LM6x7+ij+UBu4PucwoIlvCgDecVGr8j
-BU+WoWsMkGBDqMtY5d5+C0YrcZkKjQCfTAIpeoRPXw==
-=iJA6
+wsA/BAETCgBtBYJpYB7MCRB+TQxqcIhm50UUAAAAAAAcACBzYWx0QG5vdGF0
+aW9ucy5vcGVucGdwanMub3JnhN/BPGkLcGU7FIWFCvGsiocz9p1DlMat2Dt4
+AIRCTGkWIQTzOyW2kQdOhGNlcPN+TQxqcIhm5wAA9v0CCQFB5ZWDrE/NUwdo
+/owA2pP4ynLQBXZSc85RfnK4J30vujbd3Kqv0dL3//8qeMaZYi9HhlKAWSr9
+6jqKtNIdFiHP9QIJAUFHJoL5DMROGYgArGjQuxhgc6tN5Gy6PijocAw233dZ
+DyGmx3yT9zlHoHobWcvfxkcWdR5JrYSVaE3FLLu07/RU
+=RMIx
 -----END PGP SIGNATURE-----

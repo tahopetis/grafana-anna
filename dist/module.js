@@ -4,7 +4,7 @@ import { useTheme2 as h, Spinner as O, Alert as W, Stack as j, Button as $, Inpu
 import { Component as _, useState as b, useRef as U, useEffect as z } from "react";
 import { BehaviorSubject as K } from "rxjs";
 const I = ({ size: a = "medium", text: e, inline: t = !1 }) => {
-  const o = h(), n = {
+  const n = h(), o = {
     small: 16,
     medium: 24,
     large: 32
@@ -17,18 +17,18 @@ const I = ({ size: a = "medium", text: e, inline: t = !1 }) => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        gap: o.spacing(1),
-        padding: o.spacing(2)
+        gap: n.spacing(1),
+        padding: n.spacing(2)
       },
       children: [
-        /* @__PURE__ */ r(O, { size: n[a] }),
+        /* @__PURE__ */ r(O, { size: o[a] }),
         e && /* @__PURE__ */ r(
           "div",
           {
             style: {
-              color: o.colors.text.secondary,
-              fontSize: o.typography.size.sm,
-              marginTop: o.spacing(1)
+              color: n.colors.text.secondary,
+              fontSize: n.typography.size.sm,
+              marginTop: n.spacing(1)
             },
             children: e
           }
@@ -91,8 +91,8 @@ const V = ({ error: a, onReset: e }) => {
   children: a,
   variant: e = "primary",
   size: t = "md",
-  disabled: o = !1,
-  loading: n = !1,
+  disabled: n = !1,
+  loading: o = !1,
   icon: s,
   onClick: l,
   type: p = "button",
@@ -102,12 +102,12 @@ const V = ({ error: a, onReset: e }) => {
   {
     variant: e,
     size: t,
-    disabled: o || n,
+    disabled: n || o,
     icon: s,
     onClick: l,
     type: p,
     style: g ? { width: "100%" } : {},
-    children: n ? "Loading..." : a
+    children: o ? "Loading..." : a
   }
 );
 E.displayName = "Button";
@@ -115,8 +115,8 @@ const S = ({
   children: a,
   title: e,
   description: t,
-  actions: o,
-  onClick: n,
+  actions: n,
+  onClick: o,
   className: s
 }) => {
   const l = h();
@@ -124,16 +124,16 @@ const S = ({
     "div",
     {
       className: s,
-      onClick: n,
+      onClick: o,
       style: {
         border: `1px solid ${l.colors.border.weak}`,
         borderRadius: l.shape.radius.default,
         padding: l.spacing(2),
-        cursor: n ? "pointer" : "default",
+        cursor: o ? "pointer" : "default",
         backgroundColor: l.colors.background.primary
       },
       children: [
-        (e || t || o) && /* @__PURE__ */ i(
+        (e || t || n) && /* @__PURE__ */ i(
           "div",
           {
             style: {
@@ -167,7 +167,7 @@ const S = ({
                   }
                 )
               ] }),
-              o && /* @__PURE__ */ r("div", { style: { display: "flex", gap: l.spacing(1) }, children: o })
+              n && /* @__PURE__ */ r("div", { style: { display: "flex", gap: l.spacing(1) }, children: n })
             ]
           }
         ),
@@ -181,8 +181,8 @@ const M = ({
   value: a,
   onChange: e,
   placeholder: t,
-  type: o = "text",
-  disabled: n = !1,
+  type: n = "text",
+  disabled: o = !1,
   error: s,
   prefix: l,
   suffix: p,
@@ -203,7 +203,7 @@ const M = ({
         value: a,
         onChange: (c) => e(c.target.value),
         placeholder: t,
-        disabled: n,
+        disabled: o,
         rows: y,
         maxLength: v,
         autoFocus: x,
@@ -242,8 +242,8 @@ const M = ({
         value: a,
         onChange: (c) => e(c.currentTarget.value),
         placeholder: t,
-        type: o,
-        disabled: n,
+        type: n,
+        disabled: o,
         prefix: l,
         suffix: p,
         maxLength: v,
@@ -265,8 +265,8 @@ const M = ({
   ] });
 };
 M.displayName = "Input";
-const P = ({ icon: a, title: e, description: t, action: o }) => {
-  const n = h();
+const P = ({ icon: a, title: e, description: t, action: n }) => {
+  const o = h();
   return /* @__PURE__ */ i(
     "div",
     {
@@ -275,7 +275,7 @@ const P = ({ icon: a, title: e, description: t, action: o }) => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        padding: n.spacing(4),
+        padding: o.spacing(4),
         textAlign: "center",
         minHeight: "300px"
       },
@@ -285,8 +285,8 @@ const P = ({ icon: a, title: e, description: t, action: o }) => {
           {
             style: {
               fontSize: "48px",
-              marginBottom: n.spacing(2),
-              color: n.colors.text.secondary
+              marginBottom: o.spacing(2),
+              color: o.colors.text.secondary
             },
             children: a
           }
@@ -295,10 +295,10 @@ const P = ({ icon: a, title: e, description: t, action: o }) => {
           "div",
           {
             style: {
-              fontSize: n.typography.size.lg,
-              fontWeight: n.typography.fontWeightMedium,
-              color: n.colors.text.primary,
-              marginBottom: n.spacing(1)
+              fontSize: o.typography.size.lg,
+              fontWeight: o.typography.fontWeightMedium,
+              color: o.colors.text.primary,
+              marginBottom: o.spacing(1)
             },
             children: e
           }
@@ -307,15 +307,15 @@ const P = ({ icon: a, title: e, description: t, action: o }) => {
           "div",
           {
             style: {
-              fontSize: n.typography.bodySmall.fontSize,
-              color: n.colors.text.secondary,
-              marginBottom: n.spacing(3),
+              fontSize: o.typography.bodySmall.fontSize,
+              color: o.colors.text.secondary,
+              marginBottom: o.spacing(3),
               maxWidth: "400px"
             },
             children: t
           }
         ),
-        o && /* @__PURE__ */ r("div", { children: o })
+        n && /* @__PURE__ */ r("div", { children: n })
       ]
     }
   );
@@ -356,7 +356,7 @@ class X {
   getActiveConversation() {
     const { activeConversationId: e, conversations: t } = this.state$.value;
     if (e)
-      return t.find((o) => o.id === e);
+      return t.find((n) => n.id === e);
   }
   /**
    * Creates a new conversation
@@ -368,10 +368,10 @@ class X {
       messages: [],
       createdAt: /* @__PURE__ */ new Date(),
       updatedAt: /* @__PURE__ */ new Date()
-    }, o = this.state$.value;
+    }, n = this.state$.value;
     return this.setState({
-      ...o,
-      conversations: [...o.conversations, t],
+      ...n,
+      conversations: [...n.conversations, t],
       activeConversationId: t.id
     }), this.saveState(), t;
   }
@@ -379,54 +379,54 @@ class X {
    * Adds a message to a conversation
    */
   addMessage(e, t) {
-    const o = this.state$.value.conversations, n = o.findIndex((p) => p.id === e);
-    if (n === -1)
+    const n = this.state$.value.conversations, o = n.findIndex((p) => p.id === e);
+    if (o === -1)
       throw new Error(`Conversation ${e} not found`);
     const s = {
       ...t,
       id: this.generateId(),
       timestamp: /* @__PURE__ */ new Date()
     }, l = {
-      ...o[n],
-      messages: [...o[n].messages, s],
+      ...n[o],
+      messages: [...n[o].messages, s],
       updatedAt: /* @__PURE__ */ new Date()
     };
-    l.title === "New Chat" && t.role === "user" && l.messages.length === 1 && (l.title = t.content.slice(0, 50) + (t.content.length > 50 ? "..." : "")), o[n] = l, this.setState({
+    l.title === "New Chat" && t.role === "user" && l.messages.length === 1 && (l.title = t.content.slice(0, 50) + (t.content.length > 50 ? "..." : "")), n[o] = l, this.setState({
       ...this.state$.value,
-      conversations: [...o]
+      conversations: [...n]
     }), this.saveState();
   }
   /**
    * Updates a conversation's title
    */
   updateConversationTitle(e, t) {
-    const o = this.state$.value.conversations, n = o.findIndex((s) => s.id === e);
-    if (n === -1)
+    const n = this.state$.value.conversations, o = n.findIndex((s) => s.id === e);
+    if (o === -1)
       throw new Error(`Conversation ${e} not found`);
-    o[n] = {
-      ...o[n],
+    n[o] = {
+      ...n[o],
       title: t,
       updatedAt: /* @__PURE__ */ new Date()
     }, this.setState({
       ...this.state$.value,
-      conversations: [...o]
+      conversations: [...n]
     }), this.saveState();
   }
   /**
    * Deletes a conversation
    */
   deleteConversation(e) {
-    const t = this.state$.value.conversations.filter((n) => n.id !== e), o = this.state$.value.activeConversationId === e ? t.length > 0 ? t[0].id : null : this.state$.value.activeConversationId;
+    const t = this.state$.value.conversations.filter((o) => o.id !== e), n = this.state$.value.activeConversationId === e ? t.length > 0 ? t[0].id : null : this.state$.value.activeConversationId;
     this.setState({
       conversations: t,
-      activeConversationId: o
+      activeConversationId: n
     }), this.saveState();
   }
   /**
    * Sets the active conversation
    */
   setActiveConversation(e) {
-    if (!this.state$.value.conversations.find((o) => o.id === e))
+    if (!this.state$.value.conversations.find((n) => n.id === e))
       throw new Error(`Conversation ${e} not found`);
     this.setState({
       ...this.state$.value,
@@ -458,10 +458,10 @@ class X {
     const t = JSON.parse(e);
     if (!t.id || !t.messages)
       throw new Error("Invalid conversation data");
-    const o = this.state$.value;
+    const n = this.state$.value;
     return this.setState({
-      ...o,
-      conversations: [...o.conversations, t],
+      ...n,
+      conversations: [...n.conversations, t],
       activeConversationId: t.id
     }), this.saveState(), t;
   }
@@ -473,13 +473,13 @@ class X {
       const e = localStorage.getItem(k);
       if (e) {
         const t = JSON.parse(e);
-        return t.conversations = t.conversations.map((o) => ({
-          ...o,
-          createdAt: new Date(o.createdAt),
-          updatedAt: new Date(o.updatedAt),
-          messages: o.messages.map((n) => ({
-            ...n,
-            timestamp: new Date(n.timestamp)
+        return t.conversations = t.conversations.map((n) => ({
+          ...n,
+          createdAt: new Date(n.createdAt),
+          updatedAt: new Date(n.updatedAt),
+          messages: n.messages.map((o) => ({
+            ...o,
+            timestamp: new Date(o.timestamp)
           }))
         })), t;
       }
@@ -618,12 +618,12 @@ const m = new X(), B = ({ message: a }) => {
     }
   );
 }, Z = ({ content: a }) => /* @__PURE__ */ r("div", { className: "markdown-content", children: (() => {
-  const t = /```(\w+)?\n([\s\S]*?)```/g, o = [];
-  let n = 0, s;
+  const t = /```(\w+)?\n([\s\S]*?)```/g, n = [];
+  let o = 0, s;
   for (; (s = t.exec(a)) !== null; ) {
-    s.index > n && o.push(/* @__PURE__ */ r("span", { children: a.slice(n, s.index) }, n));
+    s.index > o && n.push(/* @__PURE__ */ r("span", { children: a.slice(o, s.index) }, o));
     const l = s[2];
-    o.push(
+    n.push(
       /* @__PURE__ */ r(
         "pre",
         {
@@ -638,9 +638,9 @@ const m = new X(), B = ({ message: a }) => {
         },
         s.index
       )
-    ), n = t.lastIndex;
+    ), o = t.lastIndex;
   }
-  return n < a.length && o.push(/* @__PURE__ */ r("span", { children: a.slice(n) }, n)), o.length > 0 ? o : a;
+  return o < a.length && n.push(/* @__PURE__ */ r("span", { children: a.slice(o) }, o)), n.length > 0 ? n : a;
 })() });
 B.displayName = "ChatMessage";
 const T = ({ messages: a }) => {
@@ -653,7 +653,7 @@ const T = ({ messages: a }) => {
         flexDirection: "column",
         gap: e.spacing(2)
       },
-      children: a.map((t, o) => /* @__PURE__ */ r(B, { message: t }, t.id || o))
+      children: a.map((t, n) => /* @__PURE__ */ r(B, { message: t }, t.id || n))
     }
   );
 };
@@ -662,9 +662,9 @@ const D = ({
   onSend: a,
   placeholder: e = "Type your message...",
   disabled: t = !1,
-  maxLength: o = 5e3
+  maxLength: n = 5e3
 }) => {
-  const n = h(), [s, l] = b(""), p = () => {
+  const o = h(), [s, l] = b(""), p = () => {
     const y = s.trim();
     y && !t && (a(y), l(""));
   }, g = s.trim().length > 0 && !t;
@@ -673,7 +673,7 @@ const D = ({
     {
       style: {
         display: "flex",
-        gap: n.spacing(1),
+        gap: o.spacing(1),
         alignItems: "flex-end"
       },
       children: [
@@ -687,7 +687,7 @@ const D = ({
               disabled: t,
               multiline: !0,
               rows: 1,
-              maxLength: o
+              maxLength: n
             }
           ),
           /* @__PURE__ */ i(
@@ -696,21 +696,21 @@ const D = ({
               style: {
                 display: "flex",
                 justifyContent: "space-between",
-                marginTop: n.spacing(0.5)
+                marginTop: o.spacing(0.5)
               },
               children: [
-                /* @__PURE__ */ r("div", { style: { fontSize: n.typography.size.xs, color: n.colors.text.secondary }, children: "Press Enter to send, Shift+Enter for new line" }),
+                /* @__PURE__ */ r("div", { style: { fontSize: o.typography.size.xs, color: o.colors.text.secondary }, children: "Press Enter to send, Shift+Enter for new line" }),
                 /* @__PURE__ */ i(
                   "div",
                   {
                     style: {
-                      fontSize: n.typography.size.xs,
-                      color: s.length > o * 0.9 ? n.colors.error.text : n.colors.text.secondary
+                      fontSize: o.typography.size.xs,
+                      color: s.length > n * 0.9 ? o.colors.error.text : o.colors.text.secondary
                     },
                     children: [
                       s.length,
                       " / ",
-                      o
+                      n
                     ]
                   }
                 )
@@ -741,9 +741,9 @@ const N = ({
   conversationId: a,
   onNewConversation: e,
   placeholder: t = "Ask Anna anything about your metrics, logs, alerts, or dashboards...",
-  disabled: o = !1
+  disabled: n = !1
 }) => {
-  const n = h(), [s, l] = b(a), [p, g] = b(!1), [y, v] = b(null), f = U(null), u = s ? m.getConversation(s) : void 0;
+  const o = h(), [s, l] = b(a), [p, g] = b(!1), [y, v] = b(null), f = U(null), u = s ? m.getConversation(s) : void 0;
   z(() => {
     f.current?.scrollIntoView({ behavior: "smooth" });
   }, [u?.messages]), z(() => {
@@ -753,7 +753,7 @@ const N = ({
     }
   }, [s, e]);
   const x = async (c) => {
-    if (!(!s || p || o)) {
+    if (!(!s || p || n)) {
       v(null), m.addMessage(s, {
         role: "user",
         content: c
@@ -794,23 +794,23 @@ const N = ({
         display: "flex",
         flexDirection: "column",
         height: "100%",
-        backgroundColor: n.colors.background.primary
+        backgroundColor: o.colors.background.primary
       },
       children: [
         /* @__PURE__ */ i(
           "div",
           {
             style: {
-              padding: n.spacing(2),
-              borderBottom: `1px solid ${n.colors.border.weak}`,
+              padding: o.spacing(2),
+              borderBottom: `1px solid ${o.colors.border.weak}`,
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center"
             },
             children: [
               /* @__PURE__ */ i("div", { children: [
-                /* @__PURE__ */ r("div", { style: { fontWeight: 500, color: n.colors.text.primary }, children: u.title }),
-                /* @__PURE__ */ i("div", { style: { fontSize: n.typography.size.sm, color: n.colors.text.secondary }, children: [
+                /* @__PURE__ */ r("div", { style: { fontWeight: 500, color: o.colors.text.primary }, children: u.title }),
+                /* @__PURE__ */ i("div", { style: { fontSize: o.typography.size.sm, color: o.colors.text.secondary }, children: [
                   u.messages.length,
                   " messages"
                 ] })
@@ -819,14 +819,14 @@ const N = ({
             ]
           }
         ),
-        /* @__PURE__ */ i("div", { style: { flex: 1, overflow: "auto", padding: n.spacing(2) }, children: [
+        /* @__PURE__ */ i("div", { style: { flex: 1, overflow: "auto", padding: o.spacing(2) }, children: [
           u.messages.length === 0 ? /* @__PURE__ */ r(
             P,
             {
               title: "Welcome to Anna!",
               description: /* @__PURE__ */ i("div", { children: [
                 /* @__PURE__ */ r("p", { style: { margin: 0 }, children: "Your AI-powered assistant for Grafana observability. Ask me about metrics, logs, alerts, or dashboard creation." }),
-                /* @__PURE__ */ i("p", { style: { marginTop: n.spacing(2), marginBottom: 0, fontSize: n.typography.size.sm, color: n.colors.text.secondary }, children: [
+                /* @__PURE__ */ i("p", { style: { marginTop: o.spacing(2), marginBottom: 0, fontSize: o.typography.size.sm, color: o.colors.text.secondary }, children: [
                   /* @__PURE__ */ r("strong", { children: "Note:" }),
                   " Please configure the Grafana LLM app plugin settings to enable AI capabilities. Go to Configuration → Plugins → Grafana LLM app to set up your AI provider."
                 ] })
@@ -840,21 +840,21 @@ const N = ({
           "div",
           {
             style: {
-              padding: n.spacing(2),
-              borderTop: `1px solid ${n.colors.border.weak}`
+              padding: o.spacing(2),
+              borderTop: `1px solid ${o.colors.border.weak}`
             },
             children: [
               y && /* @__PURE__ */ r(
                 "div",
                 {
                   style: {
-                    padding: n.spacing(1, 2),
-                    marginBottom: n.spacing(1),
-                    backgroundColor: n.colors.error.transparent,
-                    border: `1px solid ${n.colors.error.border}`,
-                    borderRadius: n.shape.radius.default,
-                    color: n.colors.error.text,
-                    fontSize: n.typography.size.sm
+                    padding: o.spacing(1, 2),
+                    marginBottom: o.spacing(1),
+                    backgroundColor: o.colors.error.transparent,
+                    border: `1px solid ${o.colors.error.border}`,
+                    borderRadius: o.shape.radius.default,
+                    color: o.colors.error.text,
+                    fontSize: o.typography.size.sm
                   },
                   children: y
                 }
@@ -864,7 +864,7 @@ const N = ({
                 {
                   onSend: x,
                   placeholder: t,
-                  disabled: p || o
+                  disabled: p || n
                 }
               )
             ]
@@ -977,6 +977,6 @@ const se = new G().setRootPage(q).addConfigPage({
   id: "anna-settings"
 });
 export {
-  se as plugin
+  se as default
 };
 //# sourceMappingURL=module.js.map

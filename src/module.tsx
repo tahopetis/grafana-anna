@@ -4,7 +4,7 @@ import { ConfigPage } from './pages/ConfigPage';
 
 export interface PluginMeta extends AppPluginMeta<{ jsonData: {}; secureJsonData: {} }> {}
 
-export const plugin = new AppPlugin<PluginMeta>().setRootPage(ChatPage).addConfigPage({
+export default new AppPlugin<PluginMeta>().setRootPage(ChatPage).addConfigPage({
   title: 'Settings',
   icon: 'cog',
   body: ConfigPage,

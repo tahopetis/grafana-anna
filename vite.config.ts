@@ -49,12 +49,7 @@ export default defineConfig({
         'rxjs',
       ],
       output: {
-        globals: {
-          'react': 'React',
-          'react-dom': 'ReactDOM',
-          'react/jsx-runtime': 'ReactJSXRuntime',
-          'rxjs': 'rxjs',
-        },
+        exports: 'default',
       },
     },
     minify: 'esbuild',

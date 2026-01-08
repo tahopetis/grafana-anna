@@ -7,6 +7,11 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #797 | 9:15 PM | 🔄 | Changed plugin export from named to default export | ~176 |
+| #796 | " | 🔵 | Plugin module exports ChatPage as root and ConfigPage as settings | ~219 |
+| #779 | 9:01 PM | 🔵 | Plugin module structure defines ChatPage as root and Settings as config page | ~261 |
+| #778 | 9:00 PM | 🔵 | Source plugin.json defines app configuration and pages | ~260 |
+| #755 | 8:33 PM | 🔴 | Signed package URLs corrected to match actual Grafana deployment | ~257 |
 | #723 | 5:01 PM | 🔴 | Released v0.2.4 with critical plugin structure fix | ~190 |
 | #719 | " | ✅ | Committed version 0.2.4 with plugin.json fixes and changelog update | ~170 |
 | #715 | 5:00 PM | ✅ | Bumped plugin version to 0.2.4 in plugin.json | ~187 |

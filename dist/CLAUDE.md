@@ -7,6 +7,15 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #804 | 9:17 PM | ✅ | Plugin re-signed after IIFE build format change | ~232 |
+| #803 | " | 🔵 | Plugin module exports AppPlugin instance with root page and settings config page | ~276 |
+| #802 | 9:16 PM | ✅ | Plugin rebuilt with Vite build system | ~188 |
+| #800 | " | ✅ | Plugin re-signed after Vite configuration update | ~229 |
+| #798 | 9:15 PM | ✅ | Plugin rebuilt with Vite build system | ~184 |
+| #789 | 9:13 PM | 🔵 | Module exports verified with AppPlugin setup and page configuration | ~258 |
+| #788 | " | 🔵 | Compiled module.js contains complete React chat application with conversation management | ~316 |
+| #787 | " | ✅ | Plugin rebuilt with Vite bundler | ~195 |
+| #784 | 9:12 PM | 🔵 | Compiled module.js contains React components and Grafana UI imports | ~243 |
 | #773 | 8:44 PM | ✅ | Plugin re-signed with HTTP URLs and port 3000 | ~231 |
 | #769 | 8:43 PM | 🔴 | Rebuilt signed package without CLAUDE.md but file still included in archive | ~245 |
 | #768 | " | 🔵 | Updated signed manifest confirmed with HTTP URLs and port 3000 | ~279 |
