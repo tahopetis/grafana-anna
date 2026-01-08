@@ -7,6 +7,7 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #715 | 5:00 PM | ✅ | Bumped plugin version to 0.2.4 in plugin.json | ~187 |
 | #710 | 4:59 PM | ✅ | Updated plugin root name field to match info.name | ~140 |
 | #706 | 4:58 PM | ✅ | Removed preload setting from plugin manifest | ~176 |
 | #705 | " | ✅ | Simplified plugin navigation structure in plugin.json | ~258 |

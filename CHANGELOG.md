@@ -5,6 +5,20 @@ All notable changes to the "Anna AI Assistant" Grafana plugin will be documented
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.4] - 2026-01-08
+
+### Fixed
+- **Critical**: Simplified plugin.json to only include implemented pages
+- Removed unimplemented page definitions (Alerts, Anomalies, Dashboards)
+- Removed routes section that was conflicting with module.tsx exports
+- Removed preload: true to prevent early initialization issues
+- Updated root name field to match info.name
+
+### Technical Details
+- Grafana was trying to validate page paths that didn't exist in the module export
+- This caused a "Cannot read properties of undefined (reading 'startsWith')" error
+- Plugin now only defines pages that are actually implemented
+
 ## [0.2.3] - 2026-01-08
 
 ### Fixed
@@ -69,7 +83,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-[Unreleased]: https://github.com/tahopetis/grafana-anna/compare/v0.2.3...HEAD
+[Unreleased]: https://github.com/tahopetis/grafana-anna/compare/v0.2.4...HEAD
+[0.2.4]: https://github.com/tahopetis/grafana-anna/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/tahopetis/grafana-anna/compare/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/tahopetis/grafana-anna/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/tahopetis/grafana-anna/compare/v0.2.0...v0.2.1

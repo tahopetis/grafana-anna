@@ -1,6 +1,6 @@
 {
   "name": "anna-ai-assistant",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Anna - Your intelligent Grafana companion for querying, anomaly detection, alert intelligence, and dashboard generation",
   "keywords": [
     "grafana",
