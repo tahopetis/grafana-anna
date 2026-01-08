@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+{
+  "manifestVersion": "2.0.0",
+  "signatureType": "private",
+  "signedByOrg": "syampribadias",
+  "signedByOrgName": "syampribadias",
+  "rootUrls": [
+    "https://apollo.uat.allobank.local/",
+    "https://apollo.allobank.local/",
+    "https://dc1.apollo.allobank.local/",
+    "https://dc2.apollo.allobank.local/"
+  ],
+  "plugin": "anna-ai-assistant",
+  "version": "0.2.4",
+  "time": 1767901054021,
+  "keyId": "7e4d0c6a708866e7",
+  "files": {
+    "plugin.json": "3cefe8385e25cba2da3053476418cc3c673b33917830a7a0908cf70665cbb703",
+    "img/logo.svg": "f6fc45992a70864fb76a97308785bfd2cf52669b9f6fa413512f886dfec37de7",
+    "module.js": "796c071a1dd3513402c674a4c4b9e009f8cd5981db3dffced7abfa6f3a9e7d84",
+    "module.js.map": "a9b676ab79fa5af6a08252cda53e0696e60916d4fb9bdbac36d27b2d4acd4326",
+    "CLAUDE.md": "6ffe1df8be1106556bf11a3dc81bacd8bc05d467e39b262be3e8fb5f8b4d17ac"
+  }
+}
+-----BEGIN PGP SIGNATURE-----
+
+wsA+BAETCgBtBYJpYAd+CRB+TQxqcIhm50UUAAAAAAAcACBzYWx0QG5vdGF0
+aW9ucy5vcGVucGdwanMub3JnBnoymi5vkcrW8UT26VhElR2nPAZ9e5rEy0QC
+I5xzMCgWIQTzOyW2kQdOhGNlcPN+TQxqcIhm5wAA+hYCB26RH8rKcOg5Nyeh
+aUyJruWi5cEGaF3f5CSDRxOZlmiKukdK/Qeny751OfyajpsYYvjlLTD8MivY
+Hsx60GaurbH2AgkBjLYwbBmPT1ie9kNoUCOO6yS0ZuPzJ1neUowmHXThiaGe
+/hozTqYCRukLv8Bpbyzld/cnt0b/gPJntGSdp3yEkbU=
+=/yEJ
+-----END PGP SIGNATURE-----
