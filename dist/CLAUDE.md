@@ -7,7 +7,16 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
-| #753 | 8:33 PM | ✅ | Plugin manifest re-signed with updated root URLs | ~262 |
+| #769 | 8:43 PM | 🔴 | Rebuilt signed package without CLAUDE.md but file still included in archive | ~245 |
+| #768 | " | 🔵 | Updated signed manifest confirmed with HTTP URLs and port 3000 | ~279 |
+| #766 | " | ✅ | Plugin re-signed with corrected file list after removing CLAUDE.md | ~278 |
+| #765 | " | ✅ | Created .signignore file to exclude documentation from signing | ~170 |
+| #764 | " | 🔴 | Removed CLAUDE.md from distribution to fix signature mismatch | ~213 |
+| #763 | 8:42 PM | 🔴 | Signed manifest updated with HTTP URLs and port 3000 | ~237 |
+| #762 | " | ✅ | Plugin re-signed with HTTP URLs and port 3000 | ~239 |
+| #761 | " | ✅ | Documentation file removed from distribution directory | ~208 |
+| #755 | 8:33 PM | 🔴 | Signed package URLs corrected to match actual Grafana deployment | ~257 |
+| #753 | " | ✅ | Plugin manifest re-signed with updated root URLs | ~262 |
 | #752 | " | ✅ | Plugin re-signed with HTTP URLs and port 3000 | ~236 |
 | #745 | 7:40 PM | ✅ | Signed release package committed to Git repository | ~238 |
 | #741 | 7:39 PM | 🔵 | Signed manifest contains cryptographic signatures and file integrity hashes | ~295 |
