@@ -7,6 +7,7 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #773 | 8:44 PM | ✅ | Plugin re-signed with HTTP URLs and port 3000 | ~231 |
 | #769 | 8:43 PM | 🔴 | Rebuilt signed package without CLAUDE.md but file still included in archive | ~245 |
 | #768 | " | 🔵 | Updated signed manifest confirmed with HTTP URLs and port 3000 | ~279 |
 | #766 | " | ✅ | Plugin re-signed with corrected file list after removing CLAUDE.md | ~278 |

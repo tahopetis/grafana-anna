@@ -14,24 +14,23 @@ Hash: SHA512
   ],
   "plugin": "anna-ai-assistant",
   "version": "0.2.4",
-  "time": 1767905003628,
+  "time": 1767905081000,
   "keyId": "7e4d0c6a708866e7",
   "files": {
-    ".signignore": "f8e95b617a27d1d3e0f595ea727640bea69667fab6093561406b45f11f9aeb6e",
     "plugin.json": "3cefe8385e25cba2da3053476418cc3c673b33917830a7a0908cf70665cbb703",
     "img/logo.svg": "f6fc45992a70864fb76a97308785bfd2cf52669b9f6fa413512f886dfec37de7",
     "module.js": "796c071a1dd3513402c674a4c4b9e009f8cd5981db3dffced7abfa6f3a9e7d84",
     "module.js.map": "a9b676ab79fa5af6a08252cda53e0696e60916d4fb9bdbac36d27b2d4acd4326",
-    "CLAUDE.md": "4a084848fcab4c0675956514a02e94c737a3bd2673611d2ae0ab03f2ed70b4ed"
+    "CLAUDE.md": "c2d7a317e62e64831b3a4056a9ae94a42f96806a084b8247cfb68b7ee3c8384e"
   }
 }
 -----BEGIN PGP SIGNATURE-----
 
-wsA9BAETCgBtBYJpYBbrCRB+TQxqcIhm50UUAAAAAAAcACBzYWx0QG5vdGF0
-aW9ucy5vcGVucGdwanMub3JnRIsqsr14VHx/122HSG+6bOr+uTdfrPymedwG
-vQtMy4sWIQTzOyW2kQdOhGNlcPN+TQxqcIhm5wAAjIwCCJuqrcfBh6h2caW7
-GypRJwSUe3VET1qcMyBcGtroFp9+vJLTgcltoV+DJXVRmRIbeUDyCCn6V+wU
-jT4WDyW89ZOeAgUTxuYWAak57dS0+Idhii8joRNynbY5/YKKocPTN6UNI8sx
-U2cq8ya87dyb4oUmnUPekr5Vdq60driL9jeGsWf/Dw==
-=Te0T
+wsA9BAETCgBtBYJpYBc5CRB+TQxqcIhm50UUAAAAAAAcACBzYWx0QG5vdGF0
+aW9ucy5vcGVucGdwanMub3Jnk/HaNp/xa45KBDWB4tDYHswhl8U8O87kzGmO
+0I7xQ3wWIQTzOyW2kQdOhGNlcPN+TQxqcIhm5wAAoZECCOuXOIl9HYFrJ87s
+y1KNIZiJOvEK7PjGAq2eyBWkwOGXYIjpi4tvQ7FaC4geAW1dvEX4brOKURVb
+xwDM9G1EMircAgdZCVimnXOXacM+/LM6x7+ij+UBu4PucwoIlvCgDecVGr8j
+BU+WoWsMkGBDqMtY5d5+C0YrcZkKjQCfTAIpeoRPXw==
+=iJA6
 -----END PGP SIGNATURE-----
