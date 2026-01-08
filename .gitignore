@@ -48,3 +48,9 @@ Thumbs.db
 
 # Debug
 debug.log*
+
+# Distribution packages
+*.tar.gz
+*.zip
+anna-ai-assistant-*.tar.gz
+anna-ai-assistant-*.zip
