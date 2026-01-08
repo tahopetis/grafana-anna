@@ -100,16 +100,17 @@ Format your response as a JSON object with a "queries" array.`,
 
   private extractInsights(content: string): string[] {
     const insights: string[] = [];
-    const lines = content.split('\n');
+    const lines = (content || '').split('\n');
     let inInsights = false;
 
     for (const line of lines) {
-      if (line.toLowerCase().includes('insights:')) {
+      const safeLine = line || '';
+      if (safeLine.toLowerCase().includes('insights:')) {
         inInsights = true;
         continue;
       }
-      if (inInsights && line.trim().startsWith('-')) {
-        insights.push(line.trim().substring(1).trim());
+      if (inInsights && safeLine.trim().startsWith('-')) {
+        insights.push(safeLine.trim().substring(1).trim());
       }
     }
 

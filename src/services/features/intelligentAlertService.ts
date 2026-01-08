@@ -305,11 +305,11 @@ Generate a detailed runbook for troubleshooting this alert. Include:
    */
   private parseRunbookResponse(alertId: string, content: string): RunbookSuggestion {
     const steps: RunbookSuggestion['steps'] = [];
-    const lines = content.split('\n');
+    const lines = (content || '').split('\n');
     let stepCount = 0;
 
     for (const line of lines) {
-      const trimmed = line.trim();
+      const trimmed = (line || '').trim();
       if (trimmed.match(/^\d+\./) || trimmed.startsWith('- ')) {
         stepCount++;
         steps.push({

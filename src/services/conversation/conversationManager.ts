@@ -140,7 +140,7 @@ export class ConversationManager {
 
     // Check if the user message contains follow-up indicators
     const followUpIndicators = ['what about', 'how about', 'and', 'also', 'but', 'what if', 'why', 'how'];
-    const lowerMessage = userMessage.toLowerCase();
+    const lowerMessage = (userMessage || '').toLowerCase();
 
     return followUpIndicators.some(indicator => lowerMessage.startsWith(indicator));
   }

@@ -168,18 +168,21 @@ Provide only the queries, one per line, without explanation.`,
     optimized: string;
     improvements: string[];
   } {
+    // Handle undefined or null content
+    const safeContent = content || '';
+
     // Extract the optimized query (first code block or first line)
     const codeBlockRegex = /```(?:promql|logql)?\n([\s\S]*?)```/;
-    const match = content.match(codeBlockRegex);
+    const match = safeContent.match(codeBlockRegex);
 
     let optimized = '';
-    let remainingContent = content;
+    let remainingContent = safeContent;
 
     if (match) {
       optimized = match[1].trim();
-      remainingContent = content.replace(codeBlockRegex, '').trim();
+      remainingContent = safeContent.replace(codeBlockRegex, '').trim();
     } else {
-      const lines = content.split('\n');
+      const lines = safeContent.split('\n');
       const nonEmptyLines = lines.filter(line => line.trim().length > 0);
       if (nonEmptyLines.length > 0) {
         optimized = nonEmptyLines[0].trim();
@@ -190,7 +193,7 @@ Provide only the queries, one per line, without explanation.`,
     // Extract improvements (lines starting with "- ")
     const improvements = remainingContent
       .split('\n')
-      .filter(line => line.trim().startsWith('- '))
+      .filter(line => (line || '').trim().startsWith('- '))
       .map(line => line.trim().substring(2));
 
     return {
