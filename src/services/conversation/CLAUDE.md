@@ -7,6 +7,7 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #671 | 4:37 PM | 🔴 | Committed critical runtime error fix and version bump to v0.2.2 | ~247 |
 | #662 | 4:36 PM | 🔴 | Added defensive null/undefined checks to prevent runtime errors | ~267 |
 | #654 | 4:35 PM | 🔴 | Fixed null reference error in conversationManager isFollowUpQuestion method | ~228 |
 | #653 | " | 🔵 | Conversation manager includes follow-up question detection logic | ~219 |

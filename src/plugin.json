@@ -45,13 +45,7 @@
     }
   },
   "dependencies": {
-    "grafanaDependency": ">=11.0.0",
-    "plugins": [
-      {
-        "id": "grafana-llm-app",
-        "version": ">=0.22.0"
-      }
-    ]
+    "grafanaDependency": ">=11.0.0"
   },
   "includes": [
     {
@@ -81,7 +75,8 @@
     {
       "type": "config",
       "name": "Settings",
-      "path": "/a/anna-ai-assistant/settings"
+      "path": "/a/anna-ai-assistant/settings",
+      "icon": "cog"
     }
   ],
   "routes": [

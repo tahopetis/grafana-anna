@@ -1,6 +1,6 @@
-import { AppPlugin as O } from "@grafana/data";
+import { AppPlugin as G } from "@grafana/data";
 import { jsxs as i, jsx as r } from "react/jsx-runtime";
-import { useTheme2 as h, Spinner as W, Alert as j, Stack as G, Button as $, Input as H, Badge as A, CollapsableSection as Q, CodeEditor as J, IconButton as Y, PanelChrome as R } from "@grafana/ui";
+import { useTheme2 as h, Spinner as O, Alert as W, Stack as j, Button as $, Input as H, Badge as A, CollapsableSection as Q, CodeEditor as J, IconButton as Y, PanelChrome as L } from "@grafana/ui";
 import { Component as _, useState as b, useRef as U, useEffect as z } from "react";
 import { BehaviorSubject as K } from "rxjs";
 const I = ({ size: a = "medium", text: e, inline: t = !1 }) => {
@@ -21,7 +21,7 @@ const I = ({ size: a = "medium", text: e, inline: t = !1 }) => {
         padding: o.spacing(2)
       },
       children: [
-        /* @__PURE__ */ r(W, { size: n[a] }),
+        /* @__PURE__ */ r(O, { size: n[a] }),
         e && /* @__PURE__ */ r(
           "div",
           {
@@ -38,7 +38,7 @@ const I = ({ size: a = "medium", text: e, inline: t = !1 }) => {
   );
 };
 I.displayName = "LoadingSpinner";
-class E extends _ {
+class R extends _ {
   constructor(e) {
     super(e), this.handleReset = () => {
       this.setState({ hasError: !1, error: null });
@@ -67,7 +67,7 @@ const V = ({ error: a, onReset: e }) => {
         justifyContent: "center",
         minHeight: "400px"
       },
-      children: /* @__PURE__ */ r(j, { severity: "error", title: "Something went wrong", children: /* @__PURE__ */ i(G, { direction: "column", gap: 2, children: [
+      children: /* @__PURE__ */ r(W, { severity: "error", title: "Something went wrong", children: /* @__PURE__ */ i(j, { direction: "column", gap: 2, children: [
         /* @__PURE__ */ r("div", { children: "An unexpected error occurred. You can try refreshing the page or restarting the conversation." }),
         a && /* @__PURE__ */ r(
           "div",
@@ -87,7 +87,7 @@ const V = ({ error: a, onReset: e }) => {
       ] }) })
     }
   );
-}, L = ({
+}, E = ({
   children: a,
   variant: e = "primary",
   size: t = "md",
@@ -110,7 +110,7 @@ const V = ({ error: a, onReset: e }) => {
     children: n ? "Loading..." : a
   }
 );
-L.displayName = "Button";
+E.displayName = "Button";
 const S = ({
   children: a,
   title: e,
@@ -177,7 +177,7 @@ const S = ({
   );
 };
 S.displayName = "Card";
-const B = ({
+const M = ({
   value: a,
   onChange: e,
   placeholder: t,
@@ -264,8 +264,8 @@ const B = ({
     )
   ] });
 };
-B.displayName = "Input";
-const M = ({ icon: a, title: e, description: t, action: o }) => {
+M.displayName = "Input";
+const P = ({ icon: a, title: e, description: t, action: o }) => {
   const n = h();
   return /* @__PURE__ */ i(
     "div",
@@ -320,7 +320,7 @@ const M = ({ icon: a, title: e, description: t, action: o }) => {
     }
   );
 };
-M.displayName = "EmptyState";
+P.displayName = "EmptyState";
 const k = "anna-conversations";
 class X {
   constructor() {
@@ -499,7 +499,7 @@ class X {
     return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   }
 }
-const m = new X(), P = ({ message: a }) => {
+const m = new X(), B = ({ message: a }) => {
   const e = h(), t = a.role === "user";
   return /* @__PURE__ */ r(
     "div",
@@ -642,7 +642,7 @@ const m = new X(), P = ({ message: a }) => {
   }
   return n < a.length && o.push(/* @__PURE__ */ r("span", { children: a.slice(n) }, n)), o.length > 0 ? o : a;
 })() });
-P.displayName = "ChatMessage";
+B.displayName = "ChatMessage";
 const T = ({ messages: a }) => {
   const e = h();
   return /* @__PURE__ */ r(
@@ -653,7 +653,7 @@ const T = ({ messages: a }) => {
         flexDirection: "column",
         gap: e.spacing(2)
       },
-      children: a.map((t, o) => /* @__PURE__ */ r(P, { message: t }, t.id || o))
+      children: a.map((t, o) => /* @__PURE__ */ r(B, { message: t }, t.id || o))
     }
   );
 };
@@ -679,7 +679,7 @@ const D = ({
       children: [
         /* @__PURE__ */ i("div", { style: { flex: 1 }, children: [
           /* @__PURE__ */ r(
-            B,
+            M,
             {
               value: s,
               onChange: l,
@@ -737,7 +737,7 @@ const D = ({
   );
 };
 D.displayName = "ChatInput";
-const q = ({
+const N = ({
   conversationId: a,
   onNewConversation: e,
   placeholder: t = "Ask Anna anything about your metrics, logs, alerts, or dashboards...",
@@ -815,16 +815,22 @@ const q = ({
                   " messages"
                 ] })
               ] }),
-              /* @__PURE__ */ r(L, { variant: "secondary", size: "sm", onClick: d, children: "Clear Chat" })
+              /* @__PURE__ */ r(E, { variant: "secondary", size: "sm", onClick: d, children: "Clear Chat" })
             ]
           }
         ),
         /* @__PURE__ */ i("div", { style: { flex: 1, overflow: "auto", padding: n.spacing(2) }, children: [
           u.messages.length === 0 ? /* @__PURE__ */ r(
-            M,
+            P,
             {
               title: "Welcome to Anna!",
-              description: "Your AI-powered assistant for Grafana observability. Ask me about metrics, logs, alerts, or dashboard creation."
+              description: /* @__PURE__ */ i("div", { children: [
+                /* @__PURE__ */ r("p", { style: { margin: 0 }, children: "Your AI-powered assistant for Grafana observability. Ask me about metrics, logs, alerts, or dashboard creation." }),
+                /* @__PURE__ */ i("p", { style: { marginTop: n.spacing(2), marginBottom: 0, fontSize: n.typography.size.sm, color: n.colors.text.secondary }, children: [
+                  /* @__PURE__ */ r("strong", { children: "Note:" }),
+                  " Please configure the Grafana LLM app plugin settings to enable AI capabilities. Go to Configuration → Plugins → Grafana LLM app to set up your AI provider."
+                ] })
+              ] })
             }
           ) : /* @__PURE__ */ r(T, { messages: u.messages }),
           p && /* @__PURE__ */ r(I, { text: "Anna is thinking..." }),
@@ -894,15 +900,15 @@ What metric would you like me to analyze?` : `Hello! I'm Anna, your AI assistant
 
 What would you like help with?`;
 }
-q.displayName = "ChatInterface";
-const N = () => /* @__PURE__ */ r(E, { children: /* @__PURE__ */ r(R, { title: "Anna - AI Assistant", children: /* @__PURE__ */ r("div", { style: { height: "calc(100vh - 100px)" }, children: /* @__PURE__ */ r(
-  q,
+N.displayName = "ChatInterface";
+const q = () => /* @__PURE__ */ r(R, { children: /* @__PURE__ */ r(L, { title: "Anna - AI Assistant", children: /* @__PURE__ */ r("div", { style: { height: "calc(100vh - 100px)" }, children: /* @__PURE__ */ r(
+  N,
   {
     placeholder: "Ask me anything about your metrics, logs, alerts, or dashboards..."
   }
 ) }) }) });
-N.displayName = "ChatPage";
-const F = () => /* @__PURE__ */ r(E, { children: /* @__PURE__ */ r(R, { title: "Settings", children: /* @__PURE__ */ i("div", { style: { padding: "16px" }, children: [
+q.displayName = "ChatPage";
+const F = () => /* @__PURE__ */ r(R, { children: /* @__PURE__ */ r(L, { title: "Settings", children: /* @__PURE__ */ i("div", { style: { padding: "16px" }, children: [
   /* @__PURE__ */ r(S, { title: "LLM Provider Configuration", description: "Configure your LLM provider", children: /* @__PURE__ */ i("div", { style: { padding: "16px" }, children: [
     /* @__PURE__ */ i("p", { style: { marginBottom: "16px" }, children: [
       "Anna uses the ",
@@ -964,7 +970,7 @@ const F = () => /* @__PURE__ */ r(E, { children: /* @__PURE__ */ r(R, { title: "
   ] }) })
 ] }) }) });
 F.displayName = "ConfigPage";
-const se = new O().setRootPage(N).addConfigPage({
+const se = new G().setRootPage(q).addConfigPage({
   title: "Settings",
   icon: "cog",
   body: F,

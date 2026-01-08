@@ -137,7 +137,15 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
         {conversation.messages.length === 0 ? (
           <EmptyState
             title="Welcome to Anna!"
-            description="Your AI-powered assistant for Grafana observability. Ask me about metrics, logs, alerts, or dashboard creation."
+            description={
+              <div>
+                <p style={{ margin: 0 }}>Your AI-powered assistant for Grafana observability. Ask me about metrics, logs, alerts, or dashboard creation.</p>
+                <p style={{ marginTop: theme.spacing(2), marginBottom: 0, fontSize: theme.typography.size.sm, color: theme.colors.text.secondary }}>
+                  <strong>Note:</strong> Please configure the Grafana LLM app plugin settings to enable AI capabilities.
+                  Go to Configuration → Plugins → Grafana LLM app to set up your AI provider.
+                </p>
+              </div>
+            }
           />
         ) : (
           <MessageList messages={conversation.messages} />

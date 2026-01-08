@@ -4,7 +4,7 @@ import { useTheme2 } from '@grafana/ui';
 export interface EmptyStateProps {
   icon?: React.ReactNode;
   title: string;
-  description?: string;
+  description?: string | React.ReactNode;
   action?: React.ReactNode;
 }
 
