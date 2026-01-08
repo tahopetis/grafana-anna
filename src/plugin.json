@@ -5,7 +5,7 @@
   "info": {
     "name": "Anna AI Assistant",
     "description": "Intelligent observability assistant powered by AI. Query data with natural language, detect anomalies, analyze alerts, and auto-generate dashboards - all integrated seamlessly into your Grafana workflow.",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "author": {
       "name": "Anna AI Team",
       "url": "https://github.com/tahopetis/grafana-anna"
