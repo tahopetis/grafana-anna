@@ -7,6 +7,7 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #665 | 4:36 PM | ✅ | Bumped plugin version to 0.2.2 for null safety fixes | ~158 |
 | #649 | 4:34 PM | 🔵 | Plugin module structure uses AppPlugin with ChatPage as root | ~247 |
 | #629 | 4:22 PM | ✅ | Committed version 0.2.1 with changelog and updated package.json | ~222 |
 | #625 | " | ✅ | Bumped plugin version to 0.2.1 for release | ~156 |
