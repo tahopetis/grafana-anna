@@ -3,25 +3,25 @@
   "id": "anna-ai-assistant",
   "type": "app",
   "info": {
-    "name": "Anna - AI Assistant",
-    "description": "Your intelligent Grafana companion for querying, anomaly detection, alert intelligence, and dashboard generation",
+    "name": "Anna AI Assistant",
+    "description": "Intelligent observability assistant powered by AI. Query data with natural language, detect anomalies, analyze alerts, and auto-generate dashboards - all integrated seamlessly into your Grafana workflow.",
     "version": "0.2.0",
     "author": {
-      "name": "Your Name",
-      "url": "https://github.com/yourusername"
+      "name": "Anna AI Team",
+      "url": "https://github.com/tahopetis/grafana-anna"
     },
     "links": [
       {
         "name": "GitHub",
-        "url": "https://github.com/yourusername/grafana-anna"
+        "url": "https://github.com/tahopetis/grafana-anna"
       },
       {
         "name": "Documentation",
-        "url": "https://github.com/yourusername/grafana-anna#readme"
+        "url": "https://github.com/tahopetis/grafana-anna#readme"
       },
       {
         "name": "License",
-        "url": "https://github.com/yourusername/grafana-anna/blob/main/LICENSE"
+        "url": "https://github.com/tahopetis/grafana-anna/blob/main/LICENSE"
       }
     ],
     "screenshots": [],
