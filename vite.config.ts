@@ -34,7 +34,7 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/module.tsx'),
       name: 'AnnaAIAssistant',
       formats: ['es'],
-      fileName: 'module',
+      fileName: () => 'module.js',
     },
     rollupOptions: {
       external: [
