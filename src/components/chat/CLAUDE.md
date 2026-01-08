@@ -7,7 +7,8 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
-| #690 | 4:49 PM | 🔴 | Fixed EmptyState component prop name in ChatInterface | ~168 |
+| #692 | 4:49 PM | 🔴 | Made LLM dependency optional and added configuration notice | ~256 |
+| #690 | " | 🔴 | Fixed EmptyState component prop name in ChatInterface | ~168 |
 | #687 | 4:48 PM | ✅ | Enhanced ChatInterface welcome message with LLM configuration instructions | ~233 |
 | #686 | " | 🔵 | Examined ChatInterface component structure | ~207 |
 </claude-mem-context>

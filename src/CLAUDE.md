@@ -7,6 +7,8 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #695 | 4:50 PM | ✅ | Bumped plugin version to 0.2.3 for EmptyState enhancement | ~163 |
+| #692 | 4:49 PM | 🔴 | Made LLM dependency optional and added configuration notice | ~256 |
 | #684 | 4:47 PM | ✅ | Removed grafana-llm-app plugin dependency from plugin.json | ~212 |
 | #683 | " | ✅ | Added cog icon to Settings page in plugin manifest | ~174 |
 | #677 | 4:44 PM | 🔵 | Plugin version in plugin.json already updated to 0.2.2 | ~130 |

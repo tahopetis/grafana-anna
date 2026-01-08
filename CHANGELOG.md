@@ -5,6 +5,18 @@ All notable changes to the "Anna AI Assistant" Grafana plugin will be documented
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.3] - 2026-01-08
+
+### Fixed
+- **Critical**: Removed hard dependency on `grafana-llm-app` plugin to prevent runtime errors
+- Plugin now loads without requiring LLM app to be configured
+- Added user-friendly notice in chat interface about LLM configuration requirements
+- Enhanced EmptyState component to support rich text descriptions
+
+### Changed
+- LLM app is now optional - plugin will load and display configuration guidance
+- Users can now install and explore Anna before configuring AI provider
+
 ## [0.2.2] - 2026-01-08
 
 ### Fixed
@@ -57,7 +69,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-[Unreleased]: https://github.com/tahopetis/grafana-anna/compare/v0.2.2...HEAD
+[Unreleased]: https://github.com/tahopetis/grafana-anna/compare/v0.2.3...HEAD
+[0.2.3]: https://github.com/tahopetis/grafana-anna/compare/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/tahopetis/grafana-anna/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/tahopetis/grafana-anna/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/tahopetis/grafana-anna/compare/v0.1.0...v0.2.0
