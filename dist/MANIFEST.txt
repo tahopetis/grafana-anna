@@ -7,30 +7,30 @@ Hash: SHA512
   "signedByOrg": "syampribadias",
   "signedByOrgName": "syampribadias",
   "rootUrls": [
-    "https://apollo.uat.allobank.local/",
-    "https://apollo.allobank.local/",
-    "https://dc1.apollo.allobank.local/",
-    "https://dc2.apollo.allobank.local/"
+    "http://apollo.uat.allobank.local:3000/",
+    "http://apollo.allobank.local:3000/",
+    "http://dc1.apollo.allobank.local:3000/",
+    "http://dc2.apollo.allobank.local:3000/"
   ],
   "plugin": "anna-ai-assistant",
   "version": "0.2.4",
-  "time": 1767901054021,
+  "time": 1767904398643,
   "keyId": "7e4d0c6a708866e7",
   "files": {
     "plugin.json": "3cefe8385e25cba2da3053476418cc3c673b33917830a7a0908cf70665cbb703",
     "img/logo.svg": "f6fc45992a70864fb76a97308785bfd2cf52669b9f6fa413512f886dfec37de7",
     "module.js": "796c071a1dd3513402c674a4c4b9e009f8cd5981db3dffced7abfa6f3a9e7d84",
     "module.js.map": "a9b676ab79fa5af6a08252cda53e0696e60916d4fb9bdbac36d27b2d4acd4326",
-    "CLAUDE.md": "6ffe1df8be1106556bf11a3dc81bacd8bc05d467e39b262be3e8fb5f8b4d17ac"
+    "CLAUDE.md": "774b985b110d666a029140f30a1ab7bc9309732e722c71dbd79c7749ad8e4aee"
   }
 }
 -----BEGIN PGP SIGNATURE-----
 
-wsA+BAETCgBtBYJpYAd+CRB+TQxqcIhm50UUAAAAAAAcACBzYWx0QG5vdGF0
-aW9ucy5vcGVucGdwanMub3JnBnoymi5vkcrW8UT26VhElR2nPAZ9e5rEy0QC
-I5xzMCgWIQTzOyW2kQdOhGNlcPN+TQxqcIhm5wAA+hYCB26RH8rKcOg5Nyeh
-aUyJruWi5cEGaF3f5CSDRxOZlmiKukdK/Qeny751OfyajpsYYvjlLTD8MivY
-Hsx60GaurbH2AgkBjLYwbBmPT1ie9kNoUCOO6yS0ZuPzJ1neUowmHXThiaGe
-/hozTqYCRukLv8Bpbyzld/cnt0b/gPJntGSdp3yEkbU=
-=/yEJ
+wsA+BAETCgBtBYJpYBSOCRB+TQxqcIhm50UUAAAAAAAcACBzYWx0QG5vdGF0
+aW9ucy5vcGVucGdwanMub3JnOQU6L6TN3/WrS83topli5K1SEEhzjOZTnPYe
+LGXaxXwWIQTzOyW2kQdOhGNlcPN+TQxqcIhm5wAARyICCKJDcXVTEnB1IbGj
+D4b/3gFL6qgsuhinasYV1bZWSFtpU+I+bgT2PTuqU5yYgydnuCaKoKk8hpLh
+v8huhWzS0ylEAgkBVnniswNLjv05pcnihma1h0l+N53ZmQJkQWKHKzkeocpS
+TvDhAH5DVRXAnDxIUrKw1D2B+ZEq0vEaIdk7dh6MDj0=
+=iw0W
 -----END PGP SIGNATURE-----

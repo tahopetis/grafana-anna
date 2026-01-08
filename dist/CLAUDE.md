@@ -7,6 +7,9 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #753 | 8:33 PM | ✅ | Plugin manifest re-signed with updated root URLs | ~262 |
+| #752 | " | ✅ | Plugin re-signed with HTTP URLs and port 3000 | ~236 |
+| #745 | 7:40 PM | ✅ | Signed release package committed to Git repository | ~238 |
 | #741 | 7:39 PM | 🔵 | Signed manifest contains cryptographic signatures and file integrity hashes | ~295 |
 | #737 | " | 🔵 | Built plugin artifacts available in dist directory | ~211 |
 | #709 | 4:59 PM | 🔵 | Verified dist/plugin.json shows simplified plugin structure | ~213 |
