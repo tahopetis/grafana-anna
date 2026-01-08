@@ -1,0 +1,82 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "export": "Exportar",
+    "import": "Importar"
+  },
+  "chat": {
+    "title": "Anna - Asistente de IA",
+    "placeholder": "Pregúntame sobre tus métricas, registros, alertas o dashboards...",
+    "send": "Enviar",
+    "clear": "Limpiar",
+    "newChat": "Nuevo Chat",
+    "noMessages": "¡Aún no hay mensajes! Comienza preguntando algo."
+  },
+  "alerts": {
+    "title": "Alertas",
+    "noAlerts": "No se encontraron alertas",
+    "alerting": "Alertando",
+    "pending": "Pendiente",
+    "ok": "OK",
+    "critical": "Crítico",
+    "warning": "Advertencia",
+    "info": "Info",
+    "analysis": "Análisis de Alertas",
+    "correlation": "Correlación de Alertas",
+    "remediation": "Pasos de Remediación",
+    "runbook": "Manual de Operaciones"
+  },
+  "anomalies": {
+    "title": "Detección de Anomalías",
+    "detect": "Detectar Anomalías",
+    "noAnomalies": "No se detectaron anomalías",
+    "results": "Resultados de Anomalías",
+    "severity": "Severidad",
+    "high": "Alta",
+    "medium": "Media",
+    "low": "Baja",
+    "timestamp": "Marca de Tiempo",
+    "value": "Valor",
+    "expected": "Esperado",
+    "explanation": "Explicación"
+  },
+  "dashboards": {
+    "title": "Dashboards",
+    "generate": "Generar Dashboard",
+    "description": "Describe el dashboard que deseas crear",
+    "templates": "Plantillas",
+    "preview": "Vista Previa",
+    "import": "Importar Dashboard",
+    "export": "Exportar Dashboard",
+    "version": "Versión",
+    "restore": "Restaurar Versión"
+  },
+  "query": {
+    "title": "Historial de Consultas",
+    "favorites": "Favoritos",
+    "history": "Historial",
+    "saveAsFavorite": "Guardar como Favorito",
+    "share": "Compartir Consulta",
+    "optimize": "Optimizar Consulta",
+    "explain": "Explicar Consulta"
+  },
+  "collaboration": {
+    "workspaces": "Espacios de Trabajo",
+    "members": "Miembros",
+    "permissions": "Permisos",
+    "knowledgeBase": "Base de Conocimiento",
+    "auditLog": "Registro de Auditoría",
+    "share": "Compartir",
+    "viewer": "Espectador",
+    "editor": "Editor",
+    "owner": "Propietario"
+  }
+}

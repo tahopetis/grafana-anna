@@ -1,0 +1,82 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import"
+  },
+  "chat": {
+    "title": "Anna - AI Assistant",
+    "placeholder": "Ask me anything about your metrics, logs, alerts, or dashboards...",
+    "send": "Send",
+    "clear": "Clear",
+    "newChat": "New Chat",
+    "noMessages": "No messages yet. Start by asking a question!"
+  },
+  "alerts": {
+    "title": "Alerts",
+    "noAlerts": "No alerts found",
+    "alerting": "Alerting",
+    "pending": "Pending",
+    "ok": "OK",
+    "critical": "Critical",
+    "warning": "Warning",
+    "info": "Info",
+    "analysis": "Alert Analysis",
+    "correlation": "Alert Correlation",
+    "remediation": "Remediation Steps",
+    "runbook": "Runbook"
+  },
+  "anomalies": {
+    "title": "Anomaly Detection",
+    "detect": "Detect Anomalies",
+    "noAnomalies": "No anomalies detected",
+    "results": "Anomaly Results",
+    "severity": "Severity",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "timestamp": "Timestamp",
+    "value": "Value",
+    "expected": "Expected",
+    "explanation": "Explanation"
+  },
+  "dashboards": {
+    "title": "Dashboards",
+    "generate": "Generate Dashboard",
+    "description": "Describe the dashboard you want to create",
+    "templates": "Templates",
+    "preview": "Preview",
+    "import": "Import Dashboard",
+    "export": "Export Dashboard",
+    "version": "Version",
+    "restore": "Restore Version"
+  },
+  "query": {
+    "title": "Query History",
+    "favorites": "Favorites",
+    "history": "History",
+    "saveAsFavorite": "Save as Favorite",
+    "share": "Share Query",
+    "optimize": "Optimize Query",
+    "explain": "Explain Query"
+  },
+  "collaboration": {
+    "workspaces": "Workspaces",
+    "members": "Members",
+    "permissions": "Permissions",
+    "knowledgeBase": "Knowledge Base",
+    "auditLog": "Audit Log",
+    "share": "Share",
+    "viewer": "Viewer",
+    "editor": "Editor",
+    "owner": "Owner"
+  }
+}
