@@ -1,0 +1,105 @@
+{
+  "name": "anna",
+  "id": "anna-ai-assistant",
+  "type": "app",
+  "info": {
+    "name": "Anna AI Assistant",
+    "description": "Intelligent observability assistant powered by AI. Query data with natural language, detect anomalies, analyze alerts, and auto-generate dashboards - all integrated seamlessly into your Grafana workflow.",
+    "version": "0.2.1",
+    "author": {
+      "name": "Anna AI Team",
+      "url": "https://github.com/tahopetis/grafana-anna"
+    },
+    "links": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/tahopetis/grafana-anna"
+      },
+      {
+        "name": "Documentation",
+        "url": "https://github.com/tahopetis/grafana-anna#readme"
+      },
+      {
+        "name": "License",
+        "url": "https://github.com/tahopetis/grafana-anna/blob/main/LICENSE"
+      }
+    ],
+    "screenshots": [],
+    "keywords": [
+      "ai",
+      "assistant",
+      "llm",
+      "observability",
+      "monitoring",
+      "anomaly detection",
+      "alerts",
+      "dashboard",
+      "query",
+      "promql",
+      "logql"
+    ],
+    "updated": "2026-01-08",
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    }
+  },
+  "dependencies": {
+    "grafanaDependency": ">=11.0.0",
+    "plugins": [
+      {
+        "id": "grafana-llm-app",
+        "version": ">=0.22.0"
+      }
+    ]
+  },
+  "includes": [
+    {
+      "type": "page",
+      "name": "Chat",
+      "path": "/a/anna-ai-assistant/chat",
+      "icon": "comment-alt"
+    },
+    {
+      "type": "page",
+      "name": "Alerts",
+      "path": "/a/anna-ai-assistant/alerts",
+      "icon": "alert"
+    },
+    {
+      "type": "page",
+      "name": "Anomalies",
+      "path": "/a/anna-ai-assistant/anomalies",
+      "icon": "chart-line"
+    },
+    {
+      "type": "page",
+      "name": "Dashboards",
+      "path": "/a/anna-ai-assistant/dashboards",
+      "icon": "th"
+    },
+    {
+      "type": "config",
+      "name": "Settings",
+      "path": "/a/anna-ai-assistant/settings"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/",
+      "component": "ChatPage",
+      "props": {}
+    }
+  ],
+  "preload": true,
+  "backend": false,
+  "angular": {
+    "dependencies": [],
+    "hideDeprecation": false
+  },
+  "annotations": false,
+  "alerting": false,
+  "metrics": false,
+  "executable": "",
+  "extensions": []
+}
