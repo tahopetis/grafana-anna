@@ -7,6 +7,9 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #710 | 4:59 PM | ✅ | Updated plugin root name field to match info.name | ~140 |
+| #706 | 4:58 PM | ✅ | Removed preload setting from plugin manifest | ~176 |
+| #705 | " | ✅ | Simplified plugin navigation structure in plugin.json | ~258 |
 | #695 | 4:50 PM | ✅ | Bumped plugin version to 0.2.3 for EmptyState enhancement | ~163 |
 | #692 | 4:49 PM | 🔴 | Made LLM dependency optional and added configuration notice | ~256 |
 | #684 | 4:47 PM | ✅ | Removed grafana-llm-app plugin dependency from plugin.json | ~212 |

@@ -1,5 +1,5 @@
 {
-  "name": "anna",
+  "name": "Anna AI Assistant",
   "id": "anna-ai-assistant",
   "type": "app",
   "info": {
@@ -51,26 +51,8 @@
     {
       "type": "page",
       "name": "Chat",
-      "path": "/a/anna-ai-assistant/chat",
+      "path": "/a/anna-ai-assistant",
       "icon": "comment-alt"
-    },
-    {
-      "type": "page",
-      "name": "Alerts",
-      "path": "/a/anna-ai-assistant/alerts",
-      "icon": "alert"
-    },
-    {
-      "type": "page",
-      "name": "Anomalies",
-      "path": "/a/anna-ai-assistant/anomalies",
-      "icon": "chart-line"
-    },
-    {
-      "type": "page",
-      "name": "Dashboards",
-      "path": "/a/anna-ai-assistant/dashboards",
-      "icon": "th"
     },
     {
       "type": "config",
@@ -79,14 +61,6 @@
       "icon": "cog"
     }
   ],
-  "routes": [
-    {
-      "path": "/",
-      "component": "ChatPage",
-      "props": {}
-    }
-  ],
-  "preload": true,
   "backend": false,
   "angular": {
     "dependencies": [],
