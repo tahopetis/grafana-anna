@@ -1,0 +1,50 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  pr-validation:
+    name: PR Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Run linting
+        run: npm run lint
+
+      - name: Run type check
+        run: npm run typecheck
+
+      - name: Run tests
+        run: npm test -- --coverage --maxWorkers=2
+
+      - name: Build plugin
+        run: npm run build
+
+      - name: Check for TODOs
+        run: |
+          TODO_COUNT=$(grep -r "TODO" src/ --include="*.ts" --include="*.tsx" | wc -l)
+          echo "TODO comments found: $TODO_COUNT"
+          if [ $TODO_COUNT -gt 50 ]; then
+            echo "Warning: High number of TODO comments ($TODO_COUNT)"
+          fi
+
+      - name: Check bundle size impact
+        run: |
+          npm run build
+          BUNDLE_SIZE=$(du -sh dist | cut -f1)
+          echo "PR bundle size: ${BUNDLE_SIZE}"

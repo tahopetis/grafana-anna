@@ -1,13 +1,11 @@
 import React from 'react';
 import { PanelChrome } from '@grafana/ui';
+import { AppRootProps } from '@grafana/data';
 import { ErrorBoundary } from '../components/common';
 import { ChatInterface } from '../components/chat';
+import { PluginMeta } from '../module';
 
-export interface ChatPageProps {
-  onClose?: () => void;
-}
-
-export const ChatPage: React.FC<ChatPageProps> = ({ onClose: _onClose }) => {
+export const ChatPage: React.FC<AppRootProps<PluginMeta>> = () => {
   return (
     <ErrorBoundary>
       <PanelChrome title="Anna - AI Assistant">

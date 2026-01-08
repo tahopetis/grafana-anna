@@ -1,38 +1,16 @@
 import { AppPlugin, AppPluginMeta } from '@grafana/data';
-import { ReactElement } from 'react';
 import { ChatPage } from './pages/ChatPage';
-import { AlertsPage } from './pages/AlertsPage';
-import { AnomaliesPage } from './pages/AnomaliesPage';
-import { DashboardsPage } from './pages/DashboardsPage';
 import { ConfigPage } from './pages/ConfigPage';
 
 export interface PluginMeta extends AppPluginMeta<{ jsonData: {}; secureJsonData: {} }> {}
 
 export const plugin = new AppPlugin<PluginMeta>().setRootPage(ChatPage).addConfigPage({
   title: 'Settings',
-  icon: 'gear',
+  icon: 'cog',
   body: ConfigPage,
   id: 'anna-settings',
 });
 
-// Register additional pages (these will be accessible via navigation)
-plugin.registerPage({
-  id: 'alerts',
-  title: 'Alerts',
-  icon: 'alert',
-  component: AlertsPage,
-});
-
-plugin.registerPage({
-  id: 'anomalies',
-  title: 'Anomalies',
-  icon: 'chart-line',
-  component: AnomaliesPage,
-});
-
-plugin.registerPage({
-  id: 'dashboards',
-  title: 'Dashboards',
-  icon: 'th',
-  component: DashboardsPage,
-});
+// Note: Additional pages would need to be registered through navigation
+// The registerPage method is not available in the current Grafana API version
+// Pages are accessible through the main navigation within the root page
