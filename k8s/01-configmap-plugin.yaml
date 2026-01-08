@@ -1,0 +1,17 @@
+---
+# ConfigMap containing the Anna AI Assistant plugin files
+# This ConfigMap is created from the dist/ directory after building
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: anna-ai-assistant-plugin
+  namespace: grafana
+  labels:
+    app: grafana
+    component: plugin
+    plugin: anna-ai-assistant
+data:
+  # Note: Create this ConfigMap using:
+  # kubectl create configmap anna-ai-assistant-plugin \
+  #   --from-file=dist/ \
+  #   --namespace=grafana

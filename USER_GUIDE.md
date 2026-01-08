@@ -7,6 +7,8 @@
 
 1. [Introduction](#introduction)
 2. [Getting Started](#getting-started)
+   - [Standard Installation](#standard-installation)
+   - [Kubernetes Deployment](#kubernetes-deployment)
 3. [Features](#features)
    - [Natural Language Querying](#natural-language-querying)
    - [Anomaly Detection](#anomaly-detection)
@@ -34,7 +36,9 @@
 
 ## Getting Started
 
-### Prerequisites
+### Standard Installation
+
+#### Prerequisites
 
 Before using Anna, ensure you have:
 
@@ -42,7 +46,7 @@ Before using Anna, ensure you have:
 2. **grafana-llm-app plugin** (version 0.22.0 or higher) installed and configured
 3. **An active LLM provider** (OpenAI, Anthropic, Azure OpenAI, etc.) configured in grafana-llm-app
 
-### Installation
+#### Installation
 
 1. **Install the Plugin**
    ```bash
@@ -64,7 +68,7 @@ Before using Anna, ensure you have:
    - Navigate to **Plugins** → **Anna - AI Assistant** in Grafana
    - Or go directly to: `http://your-grafana-url/a/anna-ai-assistant`
 
-### First-Time Setup
+#### First-Time Setup
 
 1. **Configure LLM Provider**
    - Go to **Configuration** → **Plugin ** → **grafana-llm-app**
@@ -74,6 +78,384 @@ Before using Anna, ensure you have:
 2. **Start Chatting**
    - Navigate to the **Chat** page
    - Start asking questions in natural language!
+
+---
+
+### Kubernetes Deployment
+
+For Kubernetes-based Grafana deployments, Anna provides comprehensive deployment manifests and scripts.
+
+#### Quick Start (ConfigMap Method)
+
+**For testing and development:**
+
+```bash
+# 1. Build the plugin
+npm run build
+
+# 2. Deploy to Kubernetes
+chmod +x k8s/deploy.sh
+./k8s/deploy.sh
+
+# 3. Access Grafana
+kubectl port-forward svc/grafana 3000:3000 -n grafana
+# Open http://localhost:3000
+```
+
+#### Deployment Methods
+
+##### Method 1: ConfigMap + Init Container (Recommended for Testing)
+
+**Quick and easy deployment without custom images:**
+
+```bash
+# 1. Build the plugin
+npm run build
+
+# 2. Create ConfigMap from dist directory
+kubectl create configmap anna-ai-assistant-plugin \
+  --from-file=dist/ \
+  --namespace=grafana
+
+# 3. Apply manifests
+kubectl apply -f k8s/00-namespace.yaml
+kubectl apply -f k8s/02-deployment-with-init-container.yaml
+kubectl apply -f k8s/03-service.yaml
+
+# 4. Verify deployment
+kubectl get pods -n grafana
+kubectl logs -f deployment/grafana -n grafana
+```
+
+**Access Grafana:**
+```bash
+# Port-forward
+kubectl port-forward svc/grafana 3000:3000 -n grafana
+# Open: http://localhost:3000/a/anna-ai-assistant
+```
+
+**Pros:**
+- ✅ Fast deployment
+- ✅ No custom image needed
+- ✅ Easy plugin updates
+
+**Cons:**
+- ❌ ConfigMap size limitations
+- ❌ Init container overhead
+
+##### Method 2: Custom Docker Image (Recommended for Production)
+
+**Production-ready deployment with plugin baked into image:**
+
+```bash
+# 1. Build the plugin
+npm run build
+
+# 2. Build and push custom image
+chmod +x k8s/build-and-push.sh
+
+# Edit k8s/build-and-push.sh to set your registry:
+# REGISTRY="your-registry"
+# IMAGE_NAME="grafana-anna"
+
+./k8s/build-and-push.sh
+
+# 3. Deploy using Helm
+helm install grafana grafana/grafana -f k8s/helm-values.yaml
+
+# Or update existing Grafana deployment
+kubectl set image deployment/grafana \
+  grafana=your-registry/grafana-anna:11.0.0-v1.0.0 \
+  -n grafana
+```
+
+**Helm values (`k8s/helm-values.yaml`):**
+```yaml
+image:
+  repository: your-registry/grafana-anna
+  tag: 11.0.0-v1.0.0
+  pullPolicy: Always
+
+adminUser: admin
+adminPassword: your-secure-password
+
+plugins:
+  - anna-ai-assistant
+
+grafana.ini:
+  plugins:
+    allow_loading_unsigned_plugins: anna-ai-assistant
+```
+
+**Pros:**
+- ✅ Production-ready
+- ✅ Faster pod startup
+- ✅ Version-controlled images
+- ✅ No ConfigMap limitations
+
+**Cons:**
+- ❌ Requires image registry
+- ❌ Need to rebuild for updates
+
+##### Method 3: Helm Chart with Plugin
+
+**Using official Grafana Helm chart:**
+
+```bash
+# Add Grafana Helm repo
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+
+# Install with Anna plugin
+helm install grafana grafana/grafana \
+  --namespace grafana \
+  --create-namespace \
+  --set image.repository=your-registry/grafana-anna \
+  --set image.tag=11.0.0-v1.0.0 \
+  --set plugins[0]=anna-ai-assistant \
+  --set grafana.ini.plugins.allow_loading_unsigned_plugins=anna-ai-assistant \
+  -f k8s/helm-values.yaml
+```
+
+#### Kubernetes Manifests
+
+Available in `k8s/` directory:
+
+| File | Description |
+|------|-------------|
+| `00-namespace.yaml` | Grafana namespace |
+| `01-configmap-plugin.yaml` | Plugin ConfigMap |
+| `02-deployment-with-init-container.yaml` | Grafana deployment with init container |
+| `03-service.yaml` | Grafana service |
+| `04-ingress.yaml` | Ingress configuration (optional) |
+| `Dockerfile` | Custom Grafana image with plugin |
+| `helm-values.yaml` | Helm chart values |
+| `build-and-push.sh` | Build and push script |
+| `deploy.sh` | Deploy script (ConfigMap method) |
+| `README.md` | Detailed K8s deployment guide |
+
+#### Configuration
+
+**Environment Variables:**
+
+Edit `k8s/02-deployment-with-init-container.yaml`:
+
+```yaml
+env:
+- name: GF_SECURITY_ADMIN_USER
+  value: "admin"
+- name: GF_SECURITY_ADMIN_PASSWORD
+  value: "your-secure-password"
+- name: GF_SERVER_ROOT_URL
+  value: "https://grafana.yourdomain.com"
+- name: GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS
+  value: "anna-ai-assistant"
+```
+
+**Resources:**
+
+```yaml
+resources:
+  requests:
+    cpu: 250m
+    memory: 512Mi
+  limits:
+    cpu: 1000m
+    memory: 2Gi
+```
+
+**Persistent Storage:**
+
+```yaml
+volumes:
+- name: data
+  persistentVolumeClaim:
+    claimName: grafana-data
+```
+
+#### Verification
+
+**Check plugin installation:**
+
+```bash
+# List plugin files
+kubectl exec -it deployment/grafana -n grafana -- \
+  ls -la /var/lib/grafana/plugins/anna-ai-assistant/
+
+# Expected output:
+# module.mjs
+# plugin.json
+# img/
+#   logo.svg
+
+# Check Grafana logs
+kubectl logs -f deployment/grafana -n grafana
+
+# Verify plugin is loaded
+kubectl exec -it deployment/grafana -n grafana -- \
+  grafana-cli plugins ls | grep anna
+```
+
+**Test the plugin:**
+1. Open Grafana: `http://your-grafana-url`
+2. Navigate to: **Configuration** → **Plugins**
+3. Find: **Anna - AI Assistant**
+4. Click to open and configure LLM provider
+
+#### Updating the Plugin
+
+**ConfigMap Method:**
+
+```bash
+# Rebuild plugin
+npm run build
+
+# Update ConfigMap
+kubectl create configmap anna-ai-assistant-plugin \
+  --from-file=dist/ \
+  --namespace=grafana \
+  --dry-run=client -o yaml | kubectl apply -f -
+
+# Restart Grafana pods
+kubectl rollout restart deployment/grafana -n grafana
+```
+
+**Custom Image Method:**
+
+```bash
+# Rebuild plugin
+npm run build
+
+# Build and push new image
+./k8s/build-and-push.sh
+
+# Update deployment
+kubectl set image deployment/grafana \
+  grafana=your-registry/grafana-anna:11.0.0-v1.0.0 \
+  -n grafana
+
+# Or upgrade Helm release
+helm upgrade grafana grafana/grafana -f k8s/helm-values.yaml
+```
+
+#### Troubleshooting
+
+**Plugin not appearing:**
+
+```bash
+# Check if plugin files exist
+kubectl exec -it deployment/grafana -n grafana -- \
+  ls -la /var/lib/grafana/plugins/anna-ai-assistant/
+
+# Check Grafana logs
+kubectl logs -f deployment/grafana -n grafana | grep -i anna
+
+# Verify ConfigMap
+kubectl describe configmap anna-ai-assistant-plugin -n grafana
+
+# Check init container logs
+kubectl logs -f deployment/grafana -c install-anna-plugin -n grafana
+```
+
+**Pod not starting:**
+
+```bash
+# Check pod status
+kubectl get pods -n grafana
+
+# Describe pod
+kubectl describe pod -l app=grafana -n grafana
+
+# Check events
+kubectl get events -n grafana --sort-by='.lastTimestamp'
+```
+
+**Permission errors:**
+
+```bash
+# Check file permissions
+kubectl exec -it deployment/grafana -n grafana -- \
+  ls -la /var/lib/grafana/plugins/
+
+# Fix: Update init container script
+chmod -R 755 /plugins/anna-ai-assistant
+```
+
+#### Production Checklist
+
+Before deploying to production:
+
+- [ ] Changed default admin password
+- [ ] Configured persistent storage
+- [ ] Set appropriate resource limits
+- [ ] Enabled TLS/HTTPS
+- [ ] Configured RBAC
+- [ ] Set up monitoring and logging
+- [ ] Configured backup strategy
+- [ ] Configured LLM provider credentials (as Kubernetes Secrets)
+- [ ] Tested plugin functionality
+- [ ] Set up high availability (replicas > 1)
+- [ ] Configured network policies
+- [ ] Set up disaster recovery plan
+
+#### Advanced Configurations
+
+**Multiple replicas with persistent storage:**
+
+```yaml
+spec:
+  replicas: 3
+  template:
+    spec:
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: grafana-data
+```
+
+**Using Kubernetes Secrets for credentials:**
+
+```yaml
+env:
+- name: GF_SECURITY_ADMIN_PASSWORD
+  valueFrom:
+    secretKeyRef:
+      name: grafana-credentials
+      key: admin-password
+- name: ANNA_LLM_API_KEY
+  valueFrom:
+    secretKeyRef:
+      name: anna-credentials
+      key: llm-api-key
+```
+
+**Horizontal Pod Autoscaler:**
+
+```yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: grafana
+  namespace: grafana
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: grafana
+  minReplicas: 2
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+```
+
+For detailed Kubernetes deployment instructions, see [k8s/README.md](k8s/README.md).
+
+---
 
 ---
 

@@ -1,0 +1,19 @@
+---
+# Service to expose Grafana
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+  namespace: grafana
+  labels:
+    app: grafana
+    component: core
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 3000
+    targetPort: http
+    protocol: TCP
+    name: http
+  selector:
+    app: grafana

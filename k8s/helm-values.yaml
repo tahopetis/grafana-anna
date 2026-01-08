@@ -1,0 +1,68 @@
+# Helm Chart Values for Grafana with Anna AI Assistant plugin
+# Usage: helm install grafana grafana/grafana -f k8s/helm-values.yaml
+
+# Grafana image configuration
+image:
+  repository: your-registry/grafana-anna  # Use custom image with plugin
+  tag: 11.0.0-v1.0.0
+  pullPolicy: Always
+
+# Admin credentials
+adminUser: admin
+adminPassword: admin
+
+# Service configuration
+service:
+  type: LoadBalancer
+  port: 3000
+  targetPort: 3000
+
+# Ingress configuration
+ingress:
+  enabled: true
+  className: nginx
+  hosts:
+    - grafana.yourdomain.com
+  tls:
+    - secretName: grafana-tls
+      hosts:
+        - grafana.yourdomain.com
+
+# Plugin configuration
+plugins:
+  - anna-ai-assistant
+
+# Allow loading unsigned plugins
+grafana.ini:
+  server:
+    root_url: http://localhost:3000
+  plugins:
+    allow_loading_unsigned_plugins: anna-ai-assistant
+  log:
+    level: info
+
+# Persistence
+persistence:
+  enabled: true
+  storageClassName: standard
+  accessModes:
+    - ReadWriteOnce
+  size: 10Gi
+
+# Resources
+resources:
+  requests:
+    cpu: 250m
+    memory: 512Mi
+  limits:
+    cpu: 1000m
+    memory: 2Gi
+
+# Node selector (optional)
+nodeSelector: {}
+
+# Tolerations (optional)
+tolerations: []
+
+# Affinity (optional)
+affinity: {}
