@@ -7,5 +7,6 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #825 | 10:06 PM | ✅ | Removed CLAUDE.md Documentation Files from Distribution | ~161 |
 | #802 | 9:16 PM | ✅ | Plugin rebuilt with Vite build system | ~188 |
 </claude-mem-context>

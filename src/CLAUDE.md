@@ -7,6 +7,9 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #832 | 10:07 PM | ✅ | Removed Source CLAUDE.md Files to Prevent Regeneration | ~224 |
+| #813 | 9:35 PM | 🔵 | Detailed Recent Activity Retrieved from Memory | ~365 |
+| #806 | 9:17 PM | 🔴 | Fixed module export configuration for Grafana compatibility | ~230 |
 | #797 | 9:15 PM | 🔄 | Changed plugin export from named to default export | ~176 |
 | #796 | " | 🔵 | Plugin module exports ChatPage as root and ConfigPage as settings | ~219 |
 | #779 | 9:01 PM | 🔵 | Plugin module structure defines ChatPage as root and Settings as config page | ~261 |

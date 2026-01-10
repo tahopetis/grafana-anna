@@ -32,12 +32,13 @@ export default defineConfig({
     emptyOutDir: true,
     lib: {
       entry: resolve(__dirname, 'src/module.tsx'),
-      name: 'AnnaAIAssistant',
-      formats: ['es'],
+      name: 'anna-ai-assistant',
+      formats: ['amd'],
       fileName: () => 'module.js',
     },
     rollupOptions: {
       external: [
+        'amd-module',
         '@grafana/data',
         '@grafana/experimental',
         '@grafana/llm',
@@ -50,6 +51,10 @@ export default defineConfig({
       ],
       output: {
         exports: 'default',
+        // Add AMD-specific options
+        amd: {
+          id: 'plugins/anna-ai-assistant/module',
+        },
       },
     },
     minify: 'esbuild',
